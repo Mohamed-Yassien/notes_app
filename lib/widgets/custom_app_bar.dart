@@ -12,7 +12,7 @@ class CustomAppBar extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         const Text(
-          'Flutter',
+          'Notes',
           style: TextStyle(
             fontSize: 25,
             fontWeight: FontWeight.bold,
