@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:notes_app_with_bloc/widgets/custom_app_bar.dart';
-import 'package:notes_app_with_bloc/widgets/custom_note_item.dart';
-import 'package:notes_app_with_bloc/widgets/notes_list_view.dart';
+import 'package:notes_app_with_bloc/widgets/notes_view_body.dart';
 
 class NotesView extends StatelessWidget {
   const NotesView({Key? key}) : super(key: key);
@@ -9,22 +7,13 @@ class NotesView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.only(
-          top: 45,
-          right: 25,
-          left: 25,
-          bottom: 25,
-        ),
-        child: Column(
-          children: const [
-            CustomAppBar(),
-            Expanded(
-              child: NotesListView(),
-            ),
-          ],
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: const Icon(
+          Icons.add,
         ),
       ),
+      body: const NotesViewBody(),
     );
   }
 }
