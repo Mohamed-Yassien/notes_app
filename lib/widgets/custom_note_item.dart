@@ -56,7 +56,7 @@ class CustomNoteItem extends StatelessWidget {
             child: Text(
               'May 20,2022',
               style:
-                  TextStyle(fontSize: 16, color: Colors.black.withOpacity(.4)),
+                  TextStyle(fontSize: 12, color: Colors.black.withOpacity(.4)),
               textAlign: TextAlign.end,
             ),
           )
