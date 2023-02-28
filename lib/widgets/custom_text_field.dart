@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:notes_app_with_bloc/constant.dart';
 
 class CustomTextField extends StatelessWidget {
   const CustomTextField({
     Key? key,
     required this.hint,
-     this.maxLines = 1,
+    this.maxLines = 1,
   }) : super(key: key);
 
   final String hint;
@@ -29,7 +27,7 @@ class CustomTextField extends StatelessWidget {
 
   OutlineInputBorder buildBorder([color]) {
     return OutlineInputBorder(
-      borderRadius: BorderRadius.circular(12),
+      borderRadius: BorderRadius.circular(5),
       borderSide: BorderSide(
         color: color ?? Colors.white,
       ),

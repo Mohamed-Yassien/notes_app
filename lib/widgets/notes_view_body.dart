@@ -12,7 +12,7 @@ class NotesViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(
-        top: 45,
+        top: 50,
         right: 25,
         left: 25,
         bottom: 25,
