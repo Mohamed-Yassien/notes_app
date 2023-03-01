@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:notes_app_with_bloc/constant.dart';
+import 'package:notes_app_with_bloc/models/note_model.dart';
 import 'package:notes_app_with_bloc/views/notes_view.dart';
 
 void main() async {
   await Hive.initFlutter();
   await Hive.openBox(kNotesBox);
+  Hive.registerAdapter(NoteModelAdapter());
 
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
