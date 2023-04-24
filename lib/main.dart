@@ -5,12 +5,14 @@ import 'package:hive_flutter/adapters.dart';
 import 'package:notes_app_with_bloc/constant.dart';
 import 'package:notes_app_with_bloc/cubits/add_note/add_note_cubit.dart';
 import 'package:notes_app_with_bloc/models/note_model.dart';
+import 'package:notes_app_with_bloc/simple_bloc_observer.dart';
 import 'package:notes_app_with_bloc/views/notes_view.dart';
 
 void main() async {
   await Hive.initFlutter();
-  await Hive.openBox(kNotesBox);
+  await Hive.openBox<NoteModel>(kNotesBox);
   Hive.registerAdapter(NoteModelAdapter());
+  Bloc.observer = SimpleBlocObserver();
 
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
